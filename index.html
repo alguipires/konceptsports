@@ -22,7 +22,7 @@
 
 <body class="">
     <!-- inicio nav-->
-    <div class="row">
+    <nav>
         <nav class="light-green darken-1">
             <div class="container">
                 <div class="nav-wrapper">
@@ -45,15 +45,19 @@
             <li><a href="#">Contato</a></li>
             <!--<li><a class="waves-effect light-blue accent-4 btn">Login</a></li>-->
         </ul>
-    </div>
+    </nav>
     <!-- fim nav-->
 
     <div class="row">
-        <div class="carousel carousel-slider">
-            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+        <div class="">
+            <!--verificar se a necessidade de ter a class container-->
+            <div class="carousel carousel-slider center">
+                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa-sou.jpg"></a>
+                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa.jpg"></a>
+                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa-sou.jpg"></a>
+                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa.jpg"></a>
+
+            </div>
         </div>
     </div>
 
@@ -63,13 +67,15 @@
     <!-- inicio footer-->
     <!-- fim footer-->
 
-
+    <!-- carregando jQuery -->
+    <script type="text/javascript" src="assets/libraries/jquery/jquery-3.3.1.min.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/libraries/materialize/js/materialize.min.js"></script>
-    <!-- carregando jQuery-->
-    <script type="text/javascript" src="assets/libraries/jquery/jquery-3.3.1.min.js"></script>
     <!-- meu script -->
-    <script type="text/javascript" src="assets/resources/scripts/mod-materilize.js"></script>
+    <script type="text/javascript" src="assets/resources/scripts/init.js"></script>
+
+
+
 </body>
 
 </html>
