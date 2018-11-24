@@ -1,8 +1,8 @@
 //função auto executalvel que insere o codigo html da pagina menu e footer 
-(function () {
+/*(function () {
     $("#menu").load("menu.html");
     $("#footer").load("footer.html");
-})();
+})();*/
 
 (function ($) {
     $(function () {
