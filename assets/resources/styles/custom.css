@@ -1,7 +1,13 @@
-.preenchimento-linha {
-    padding-top: 15%;
+.font-icon-social-midia-edit {
+    font-size: 2em;
 }
 
-.font-icon-social-midia {
-    font-size: 2em;
+.margin-top-bottom-edit {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.padding-top-bottom-edit {
+    padding-bottom: 30%;
+    padding-top: 30%;
 }
