@@ -8,6 +8,8 @@
     <meta name="theme-color" content="#7cb342">
     <meta name="apple-mobile-web-app-status-bar-style" content="#7cb342">
     <meta name="msapplication-navbutton-color" content="#7cb342">
+    <!--Import Icons Font Awasome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -22,93 +24,151 @@
 
 <body class="">
     <!-- inicio nav-->
-    <nav>
-        <nav class="light-green darken-1">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Koncept</a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Nossa loja</a></li>
-                        <li><a href="#">Quem somos</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Nossa loja</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Contato</a></li>
-            <!--<li><a class="waves-effect light-blue accent-4 btn">Login</a></li>-->
-        </ul>
-    </nav>
-    <!-- fim nav-->
-
-    <div class="row">
-        <div class="">
-            <!--verificar se a necessidade de ter a class container-->
-            <div class="carousel carousel-slider center">
-                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa-sou.jpg"></a>
-                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa.jpg"></a>
-                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa-sou.jpg"></a>
-                <a class="carousel-item" href="#one!"><img src="assets/resources/img/capa.jpg"></a>
-
+    <nav class="light-green darken-1">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Koncept</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nossa loja</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Nossa loja</a></li>
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Contato</a></li>
+        <!--<li><a class="waves-effect light-blue accent-4 btn">Login</a></li>-->
+    </ul>
+    <!-- fim nav-->
+
+    <!--inicio carousel principal -->
+    <div class="carousel carousel-slider center">
+        <a class="carousel-item" href="#one!"><img class="responsive-img" src="assets/resources/img/capa-sou.jpg"></a>
+        <a class="carousel-item" href="#one!"><img class="responsive-img" src="assets/resources/img/capa.jpg"></a>
+        <a class="carousel-item" href="#one!"><img class="responsive-img" src="assets/resources/img/capa-sou.jpg"></a>
+        <a class="carousel-item" href="#one!"><img class="responsive-img" src="assets/resources/img/capa.jpg"></a>
+    </div>
+    <!--fim carousel principal -->
+
+    <!--inicio icons e tipos de bike -->
     <div class="container">
         <div class="section">
             <div class="row">
 
                 <div class="col s12 m4">
                     <div class="icon-block">
-                        <h2 class="center brown-text"><i class="large material-icons">directions_bike</i></h2>
+                        <h2 class="center brown-text"><i class="medium material-icons light-green-text darken-1">directions_bike</i></h2>
                         <h5 class="center">Speed</h5>
 
                         <p class="light">Se você curte velocidade, essa é a bike certa pra você. As bikes de speed são leves, com pneus finos e aceleram muito rápido. Por isso, são recomendadas para ciclistas mais experientes...</p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center brown-text"><i class="large material-icons">directions_bike</i></h2>
-                            <h5 class="center">Mountain</h5>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="medium material-icons light-green-text darken-1">directions_bike</i></h2>
+                        <h5 class="center">Mountain</h5>
 
-                            <p class="light">Lama, aventura e diversão. Se essa é a sua vibe, as mountain bikes foram feitas pra você! Elas andam em qualquer terreno, com aros entre 24 a 29 polegadas, são perfeitas para enfrentat...</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s12 m4">
-                            <div class="icon-block">
-                                <h2 class="center brown-text"><i class="large material-icons">directions_bike</i></h2>
-                                <h5 class="center">Passeio</h5>
-
-                                <p class="light">Nossa cidade é linda. Cada parque, praça ou avenida merece nosso olhar atento. Para ver a cidade de outro ponto de vista, nada melhor do que faze-lo de bike! Sem pressa nem correria,...</p>
-                            </div>
-                        </div>
-
+                        <p class="light">Lama, aventura e diversão. Se essa é a sua vibe, as mountain bikes foram feitas pra você! Elas andam em qualquer terreno, com aros entre 24 a 29 polegadas, são perfeitas para enfrentat...</p>
                     </div>
                 </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="medium material-icons light-green-text darken-1">directions_bike</i></h2>
+                        <h5 class="center">Passeio</h5>
+
+                        <p class="light">Nossa cidade é linda. Cada parque, praça ou avenida merece nosso olhar atento. Para ver a cidade de outro ponto de vista, nada melhor do que faze-lo de bike! Sem pressa nem correria,...</p>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </div>
+    <!--fim icons e tipos de bike -->
+
+
+    <!--inicio parralax e carousel secundario das logos -->
+    <div class="parallax-container valign-wrapper">
+        <div class="parallax"><img src="assets/resources/img/parallax/conserto-bike-estrada.jpg"></div>
+        <div class="container ">
+            <div class="row center white-text">
+                <h5 class="">Evite problemas nesse verão...</h5>
+            </div>
+            <div class="row center">
+                <a href="" class="waves-effect light-green darken-1 btn-small">Confira nossas dicas</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="section white">
+        <div class="container">
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img class="responsive-img" src="assets/resources/img/logo/logo-continental.png"></a>
+                <a class="carousel-item" href="#two!"><img class="responsive-img" src="assets/resources/img/logo/logo-gu.png"></a>
+                <a class="carousel-item" href="#three!"><img class="responsive-img" src="assets/resources/img/logo/logo-pro.png"></a>
+                <a class="carousel-item" href="#four!"><img class="responsive-img" src="assets/resources/img/logo/logo-shimano.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div class="parallax"><img src="assets/resources/img/parallax/avancini.jpeg"></div>
+        <div class="container ">
+            <div class="row center white-text">
+                <h5 class="">Henrique Avancini: MTB como missão de vida</h5>
+            </div>
+            <div class="row center">
+                <a href="https://www.youtube.com/watch?v=gxZBknqRaIQ&t=891s" class="waves-effect light-green darken-1 btn-small">Confira</a>
+
+            </div>
+        </div>
+    </div>
+    <!--fim parralax e carousel secundario das logos -->
+
+    <!-- inicio footer-->
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contato</h5>
+                    <p class="white-text text-lighten-4">Telefone: (42) 3636-3636</p>
+                    <p class="white-text text-lighten-4">Endereço: R. Quintino Bocaiúva, 1730 - Centro, Guarapuava - PR, 85010-300</p>
+                    <p class="white-text text-lighten-4"><a href="mailto:contato@konceptsports.com.br">contato@konceptsports.com.br</a></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="white-text text-lighten-3" href="#https://www.facebook.com/konceptsports/"><span class="font-icon-social-midia"><i class="fab fa-facebook-square"></i></span>&nbsp;@konceptsports</a></li>
+                        <li><a class="white-text text-lighten-3" href="#https://www.facebook.com/konceptsports/"><span class="font-icon-social-midia"><i class="fab fa-instagram"></i></span>&nbsp;koncept_sports</a></li>
+                        <li><a class="white-text text-lighten-3" href="#https://www.facebook.com/konceptsports/"><span class="font-icon-social-midia"><i class="fab fa-instagram"></i></span>&nbsp;ciclismoguarapuava</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-                <div class="section">
+                © 2018 koncept bikes & sports. Todos os direitos reservados.
+                <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+            </div>
+        </div>
+    </footer>
 
-                    <!-- inicio footer-->
-                    <!-- fim footer-->
 
-                    <!-- carregando jQuery -->
-                    <script type="text/javascript" src="assets/libraries/jquery/jquery-3.3.1.min.js"></script>
-                    <!--JavaScript at end of body for optimized loading-->
-                    <script type="text/javascript" src="assets/libraries/materialize/js/materialize.min.js"></script>
-                    <!-- meu script -->
-                    <script type="text/javascript" src="assets/resources/scripts/init.js"></script>
+    <!-- fim footer-->
+
+    <!-- carregando jQuery -->
+    <script type="text/javascript" src="assets/libraries/jquery/jquery-3.3.1.min.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="assets/libraries/materialize/js/materialize.min.js"></script>
+    <!-- meu script -->
+    <script type="text/javascript" src="assets/resources/scripts/init.js"></script>
 
 
 

@@ -5,12 +5,21 @@
         $('.parallax').parallax();
 
 
+        //inicialização carousel logos
+        $('.carousel').carousel();
+
+        //inicialização carousel principal superior
         $('.carousel.carousel-slider').carousel({
             fullWidth: true,
             indicators: true
         });
+        /*
+                //inicialização carousel logos
+                $('.carousel').carousel();
+        */
+        //set inteval para ambos carousel
         window.setInterval(function () {
-            $('.carousel.carousel-slider').carousel('next');
+            $('.carousel').carousel('next');
         }, 3000);
 
     }); // end of document ready
