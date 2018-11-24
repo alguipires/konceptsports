@@ -1,9 +1,14 @@
+//função auto executalvel que insere o codigo html da pagina menu e footer 
+(function () {
+    $("#menu").load("menu.html");
+    $("#footer").load("footer.html");
+})();
+
 (function ($) {
     $(function () {
 
         $('.sidenav').sidenav();
         $('.parallax').parallax();
-
 
         //inicialização carousel logos
         $('.carousel').carousel();
