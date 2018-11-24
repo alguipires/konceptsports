@@ -13,14 +13,12 @@
             fullWidth: true,
             indicators: true
         });
-        /*
-                //inicialização carousel logos
-                $('.carousel').carousel();
-        */
-        //set inteval para ambos carousel
+
+        //set inteval
         window.setInterval(function () {
-            $('.carousel').carousel('next');
-        }, 3000);
+            $('.carousel').carousel('next', 1);
+        }, 4000);
+
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
