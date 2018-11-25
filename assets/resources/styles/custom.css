@@ -11,3 +11,21 @@
     padding-bottom: 30%;
     padding-top: 30%;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.tam-font-edit {
+    font-size: 2em;
+}
+
+.strong-font-edit {
+    font-weight: 500;
+}
