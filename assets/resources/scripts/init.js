@@ -19,11 +19,21 @@
             $('.carousel').carousel('next', 1);
         }, 4000);
 
+        $('.modal').modal();
+        $('.modal').modal('open');
+
+
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-
+/*
+document.addEventListener('DOMContentLoaded', function () {
+    var Modalelem = document.querySelector('.modal');
+    var instance = M.Modal.init(Modalelem);
+    instance.open();
+});
+*/
 /*
 
 M.AutoInit();

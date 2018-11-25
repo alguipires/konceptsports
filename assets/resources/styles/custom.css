@@ -29,3 +29,7 @@ main {
 .strong-font-edit {
     font-weight: 500;
 }
+
+.display-none-edit {
+    display: none;
+}
