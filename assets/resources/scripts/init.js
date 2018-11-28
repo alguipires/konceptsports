@@ -23,37 +23,8 @@
         $('.modal').modal('open');
 
 
-
+        $("#input-telefone").mask('(00) 00000-0000', {
+            reverse: false
+        });
     }); // end of document ready
 })(jQuery); // end of jQuery name space
-
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    var Modalelem = document.querySelector('.modal');
-    var instance = M.Modal.init(Modalelem);
-    instance.open();
-});
-*/
-/*
-
-M.AutoInit();
-
-//window.onload
-$(document).ready(function () {
-    //SIDENAV COM HAMBURGER ICON MOBILE 
-    $('.sidenav').sidenav();
-    //CAROUSEL
-
-    $('.carousel.carousel-slider').carousel();
-
-    $('.carousel.carousel-slider').carousel();
-    window.setInterval(function () {
-        $('.carousel.carousel-slider').carousel('next');
-    }, 3000);
-
-});
-*/
-
-
-
-// biblioteca SLICK CAROUSEL http://kenwheeler.github.io/slick/
