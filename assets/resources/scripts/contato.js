@@ -31,6 +31,18 @@ window.onload = function () {
         }
     });
 }
+$(document).ready(function () {
+    $('#modal2').modal();
+    //$('#modal2').modal('open');
+});
+
+function removerClasse() {
+    $("#btn-submit").removeClass("disabled");
+}
+
+function adicionaClasse() {
+    $("#btn-submit").addClass("disabled");
+}
 
 function ganhaFocus(id) {
     let text = $$(id);
@@ -47,8 +59,20 @@ function perdeFocus(id) {
     }
 }
 
+/*let Usuario = {
+    nome: "",
+    telefone: "",
+    email: "",
+    mensagem: "",
+    insereDados: function (nome, telefone, email, mensagem) {
+        this.nome = nome,
+            this.telefone = telefone,
+            this.email = email,
+            this.mensagem = mensagem;
+    }
+}*/
 
-
+//let usu = Object.create(Usuario);
 
 let Usuario = function (nome, telefone, email, mensagem) {
     this.nome = nome,
@@ -56,31 +80,56 @@ let Usuario = function (nome, telefone, email, mensagem) {
         this.email = email,
         this.mensagem = mensagem;
 }
-}
 
-//let usuario = Object.create(Usuario);
 
-function removerClasse() {
-    $("#btn-submit").removeClass("disabled");
-    //$$('btn-submit').disabled = false;
 
-}
+let arrayReclama = new Array();
 
-function removerClasse() {
-    $("#btn-submit").removeClass("disabled");
-    //$$('btn-submit').disabled = false;
 
-}
-
-let arrayUser = new Array();
 
 function validaPreenchido() {
-    arrayUser = new Usuario($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value);
-    console.log("preenchido insere dados");
-    for (i in arrayUser) {
-        if (arrayUser[i].value != undefined) {
-            console.log("entrou no if");
-            $("#btnSubmit").removeClass("disable");
-        }
+    //console.log($$('input-name').valueOf);
+    if ($$('input-name').value != "" && $$('input-telefone').value != "" && $$('input-email').value != "" && $$('input-textarea').value != "") {
+        //let user1 = new Usuario($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value);
+        arrayReclama.push(new Usuario($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value))
+        //usu.insereDados($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value))
+        console.log(arrayReclama);
+        console.log("entrou no if");
+        removerClasse();
+    } else {
+        adicionaClasse();
+        //console.log("entrou no else");
     }
+}
+
+function criaReclamacoes() {
+
+    localStorage.setItem("reclamacoes", JSON.stringify(arrayReclama));
+    $('#modal2').modal('open');
+}
+
+function novaReclamacao() {
+    console.log("me clicou");
+    $$('input-name').value = "";
+    $$('input-telefone').value = "";
+    $$('input-email').value = "";
+    $$('input-textarea').value = "";
+
+    restauraJson();
+}
+
+let swap = "";
+
+function restauraJson() {
+    console.log("restaurando os objetos");
+    let arrayReclama = JSON.parse(localStorage.getItem("reclamacoes"));
+    for (let i = 0; i <= arrayReclama.length; i++) {
+        let objeto = arrayReclama[i];
+        console.log(objeto);
+        console.log(objeto.nome);
+        swap = objeto.nome;
+        //$$('p-name').innerHTML = objeto;
+    }
+    $$('p-name').innerHTML = swap;
+
 }
