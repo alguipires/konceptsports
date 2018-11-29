@@ -107,15 +107,18 @@ function retornaUsuarioLocal() {
     let user = localStorage.getItem('usuario');
     let usuario = JSON.parse(user);
 
-    // console.log(usuario.nome);
-    // $$("p-name").innerHTML = usuario.nome;
-    /*
-        let nomeUser = JSON.parse(localStorage.getItem('usuario'));
-        console.log(nomeUser.nome);*/
-
-    $$("p-name").textContent = nomeUser.nome;
-
     $('#nome_mostrar').text(usuario.nome);
 
     $('#modal2').show();
 }
+
+
+
+/*
+    console.log(usuario.nome);
+    $$("p-name").innerHTML = usuario.nome;
+    
+        let nomeUser = JSON.parse(localStorage.getItem('usuario'));
+        console.log(nomeUser.nome);
+
+   $$("p-name").textContent = nomeUser.nome;*/
