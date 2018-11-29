@@ -3,6 +3,13 @@ let $$ = function (id) {
 }
 
 window.onload = function () {
+
+    function adicionaClasse() {
+        $("#btn-submit").addClass("disabled");
+    }
+
+    adicionaClasse();
+
     $$('form-contato').addEventListener("submit", function (event) {
         event.preventDefault();
     });
@@ -31,18 +38,14 @@ window.onload = function () {
         }
     });
 }
-$(document).ready(function () {
-    $('#modal2').modal();
-    //$('#modal2').modal('open');
-});
 
 function removerClasse() {
     $("#btn-submit").removeClass("disabled");
 }
 
-function adicionaClasse() {
-    $("#btn-submit").addClass("disabled");
-}
+$(document).ready(function () {
+    $('#modal2').modal();
+});
 
 function ganhaFocus(id) {
     let text = $$(id);
@@ -59,7 +62,8 @@ function perdeFocus(id) {
     }
 }
 
-/*let Usuario = {
+
+let Usuario = {
     nome: "",
     telefone: "",
     email: "",
@@ -70,66 +74,48 @@ function perdeFocus(id) {
             this.email = email,
             this.mensagem = mensagem;
     }
-}*/
-
-//let usu = Object.create(Usuario);
-
-let Usuario = function (nome, telefone, email, mensagem) {
-    this.nome = nome,
-        this.telefone = telefone,
-        this.email = email,
-        this.mensagem = mensagem;
 }
 
+let usuario = Object.create(Usuario);
+
+function salvaReclamacao() {
+
+    usuario.insereDados(
+        $$("input-name").value,
+        $$("input-telefone").value,
+        $$("input-email").value,
+        $$("input-textarea").value
+    );
+
+    // Armazena no LocalStorage
+    localStorage.setItem('usuario', JSON.stringify(usuario));
 
 
-let arrayReclama = new Array();
 
+    retornaUsuarioLocal();
 
-
-function validaPreenchido() {
-    //console.log($$('input-name').valueOf);
-    if ($$('input-name').value != "" && $$('input-telefone').value != "" && $$('input-email').value != "" && $$('input-textarea').value != "") {
-        //let user1 = new Usuario($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value);
-        arrayReclama.push(new Usuario($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value))
-        //usu.insereDados($$('input-name').value, $$('input-telefone').value, $$('input-email').value, $$('input-textarea').value))
-        console.log(arrayReclama);
-        console.log("entrou no if");
-        removerClasse();
-    } else {
-        adicionaClasse();
-        //console.log("entrou no else");
-    }
+    //Retira Refresh da pagina
+    return false;
 }
 
-function criaReclamacoes() {
+function retornaUsuarioLocal() {
 
-    localStorage.setItem("reclamacoes", JSON.stringify(arrayReclama));
-    $('#modal2').modal('open');
-}
+    //Esconde corpo da pagina
+    $('#content-page').hide();
 
-function novaReclamacao() {
-    console.log("me clicou");
-    $$('input-name').value = "";
-    $$('input-telefone').value = "";
-    $$('input-email').value = "";
-    $$('input-textarea').value = "";
+    //Retorna Usuario da sessao
+    let user = localStorage.getItem('usuario');
+    let usuario = JSON.parse(user);
 
-    restauraJson();
-}
+    // console.log(usuario.nome);
+    // $$("p-name").innerHTML = usuario.nome;
+    /*
+        let nomeUser = JSON.parse(localStorage.getItem('usuario'));
+        console.log(nomeUser.nome);*/
 
-let swap = "";
+    $$("p-name").textContent = nomeUser.nome;
 
-function restauraJson() {
-    console.log("restaurando os objetos");
-    let arrayReclama = JSON.parse(localStorage.getItem("reclamacoes"));
-    for (let i = 0; i <= arrayReclama.length; i++) {
-        let objeto = arrayReclama[i];
-        console.log(objeto);
-        console.log(objeto.nome);
-        swap = objeto.nome;
-        //$$('p-name').innerHTML = objeto;
-    }
-    $$('p-name').innerHTML = swap;
+    $('#nome_mostrar').text(usuario.nome);
 
+    $('#modal2').show();
 }

@@ -38,21 +38,80 @@
 
 <body>
 
-    <!-- inicio nav-->
-    <div id="menu"></div>
-    <!-- fim nav-->
+    <div id="content-page">
+        <!-- inicio nav-->
+        <div id="menu"></div>
+        <!-- fim nav-->
 
-    <!--inicio pagina main-->
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <div class="section">
-                    <div class="light-green darken-1">
-                        <div class="light-green darken-1 white-text center tam-font-edit">Contato</div>
+        <!--inicio pagina main-->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="section">
+                        <div class="light-green darken-1">
+                            <div class="light-green darken-1 white-text center tam-font-edit">Contato</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="section">
+                        <div class="center">
+                            <p> Dúvidas, sugestões ou reclamações? Entre em contato conosco! Se preferir, ligue para <strong>(42) 3636-3636</strong></p>
+                            <p id="p-name"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form id="form-contato" action="" class="col s12" onsubmit="salvaReclamacao()">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="input-name" type="text" class="validate" maxlength="60" autofocus pattern="^(([A-ZÀ-Ú][a-zà-ú]{3,} )([A-ZÀ-Ú][a-zà-ú]{3,})?(([A-ZÀ-Ú][a-zà-ú]{3,} )?([a-zà-ú]{2} )([A-ZÀ-Ú][a-zà-ú]{3,}))?)$" required>
+                            <label for="input-name">Nome Sobenome</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="input-telefone" type="tel" class="validate" maxlength="15" placeholder="Ex.: (00) 00000-0000" required>
+                            <label for="input-telefone">Telefone</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="input-email" type="email" class="validate" maxlength="40" pattern="^[a-z]+(\.|_)?[a-z]+@[a-z]+\.?[a-z]+\.?[a-z]{0,3}(\.?[a-z]{2})?" placeholder="seu@email.com" onfocus="ganhaFocus('input-email')" onblur="perdeFocus('input-email')" required>
+                            <label for="input-email">Email</label>
+                            <span class="helper-text" data-error="Favor digitar e-mail valido" data-success="Correto">ajuda</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea maxlength="3000" id="input-textarea" class="materialize-textarea" onfocus="removerClasse()" required></textarea>
+                            <label for="input-textarea">Sua mensagem</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button id="btn-submit" class="btn waves-effect light-green darken-1 white-text" type="submit" name="action" name="action">Enviar<i class="material-icons right">send</i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--fim pagina main-->
+
+        <!-- inicio footer-->
+        <div id="footer"></div>
+        <!-- fim footer-->
+
+
     </div>
 
     <!-- Modal Trigger -->
@@ -60,74 +119,17 @@
     <!-- Modal Structure -->
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <h4>Formulario enviado!</h4>
+            <h4>Formulario enviado! Sr.(a) <span id="nome_mostrar"> </span> </h4>
         </div>
         <div class="modal-footer">
             <a href="index.html" class="modal-close waves-effect waves-green btn-flat">Sair</a>
-            <a href="#" onclick="novaReclamacao()" class="modal-close waves-effect waves-green btn-flat">Nova Reclamação</a>
+            <a href="contato.html" class="modal-close waves-effect waves-green btn-flat">Nova Reclamação</a>
             <!--<a href="contato.html" class="modal-close waves-effect waves-green btn-flat">Avisar</a>-->
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <div class="section">
-                    <div class="center">
-                        <p> Dúvidas, sugestões ou reclamações? Entre em contato conosco! Se preferir, ligue para <strong>(42) 3636-3636</strong></p>
-                        <p id="p-name"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-    <div class="container">
-        <div class="row">
-            <form id="form-contato" action="" submit="" class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="input-name" type="text" class="validate" maxlength="60" autofocus pattern="^(([A-ZÀ-Ú][a-zà-ú]{3,} )([A-ZÀ-Ú][a-zà-ú]{3,})?(([A-ZÀ-Ú][a-zà-ú]{3,} )?([a-zà-ú]{2} )([A-ZÀ-Ú][a-zà-ú]{3,}))?)$" onblur="validaPreenchido()" required>
-                        <label for="input-name">Nome Sobenome</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">phone</i>
-                        <input id="input-telefone" type="tel" class="validate" maxlength="15" placeholder="Ex.: (00) 00000-0000" onblur="validaPreenchido()" required>
-                        <label for="input-telefone">Telefone</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="input-email" type="email" class="validate" maxlength="40" pattern="^[a-z]+(\.|_)?[a-z]+@[a-z]+\.?[a-z]+\.?[a-z]{0,3}(\.?[a-z]{2})?" placeholder="seu@email.com" onfocus="ganhaFocus('input-email')" onblur="perdeFocus('input-email'), validaPreenchido()" required>
-                        <label for="input-email">Email</label>
-                        <span class="helper-text" data-error="Favor digitar e-mail valido" data-success="Correto">ajuda</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <textarea maxlength="3000" id="input-textarea" class="materialize-textarea" onblur="validaPreenchido()" required></textarea>
-                        <label for="input-textarea">Sua mensagem</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <button id="btn-submit" class="btn waves-effect light-green darken-1 white-text" onclick="criaReclamacoes()" type="submit" name="action" name="action">Enviar<i class="material-icons right">send</i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-    <!--fim pagina main-->
-
-    <!-- inicio footer-->
-    <div id="footer"></div>
-    <!-- fim footer-->
 
 </body>
 
