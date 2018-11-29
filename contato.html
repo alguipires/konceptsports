@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="input-name" type="text" class="validate" maxlength="60" autofocus pattern="^(([A-ZÀ-Ú][a-zà-ú]{3,} )([A-ZÀ-Ú][a-zà-ú]{3,})?(([A-ZÀ-Ú][a-zà-ú]{3,} )?([a-zà-ú]{2} )([A-ZÀ-Ú][a-zà-ú]{3,}))?)$" required>
+                            <input id="input-name" type="text" class="validate" maxlength="60" autofocus pattern="^(?![ ])(?!.*[ ]{2})((?:e|da|do|das|dos|de|d'|D'|la|las|el|los)\s*?|(?:[A-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð'][^\s]*\s*?)(?!.*[ ]$))+$" required>
                             <label for="input-name">Nome Sobenome</label>
                         </div>
                         <div class="input-field col s6">
@@ -85,7 +85,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="input-email" type="email" class="validate" maxlength="40" pattern="^[a-z]+(\.|_)?[a-z]+@[a-z]+\.?[a-z]+\.?[a-z]{0,3}(\.?[a-z]{2})?" placeholder="seu@email.com" onfocus="ganhaFocus('input-email')" onblur="perdeFocus('input-email')" required>
+                            <input id="input-email" type="email" class="validate" maxlength="40" pattern="^([\w\-]+\.)*[\w\- ]+@([\w\- ]+\.)+([\w\-]{2,3})$" placeholder="seu@email.com" onfocus="ganhaFocus('input-email')" onblur="perdeFocus('input-email')" required>
                             <label for="input-email">Email</label>
                             <span class="helper-text" data-error="Favor digitar e-mail valido" data-success="Correto">ajuda</span>
                         </div>
